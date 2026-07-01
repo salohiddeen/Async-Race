@@ -36,10 +36,12 @@ body {
 
 /* Header */
 .header {
-  background: var(--surface);
+  background: rgba(18, 18, 42, 0.7);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
   border-bottom: 1px solid var(--border);
   padding: 0 24px;
-  height: 60px;
+  height: 70px;
   display: flex;
   align-items: center;
   justify-content: space-between;
