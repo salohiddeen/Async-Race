@@ -1,0 +1,130 @@
+/* CSS Variables */
+:root {
+  --bg: #0d0d1a;
+  --surface: #12122a;
+  --surface2: #1a1a35;
+  --border: #2a2a4a;
+  --text: #e8e8f0;
+  --text-secondary: #8888aa;
+  --accent: #f5a623;
+  --accent-dark: #d4881a;
+  --road-bg: #1e1e38;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family:
+    'Segoe UI',
+    system-ui,
+    -apple-system,
+    sans-serif;
+  min-height: 100vh;
+}
+
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header */
+.header {
+  background: var(--surface);
+  border-bottom: 1px solid var(--border);
+  padding: 0 24px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.header__brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1.2rem;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+}
+
+.header__logo {
+  font-size: 1.5rem;
+}
+
+.header__name {
+  background: linear-gradient(135deg, #f5a623, #ff6b35);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.header__nav {
+  display: flex;
+  gap: 4px;
+}
+
+.header__link {
+  padding: 8px 16px;
+  border-radius: 8px;
+  color: var(--text-secondary);
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 600;
+  transition:
+    color 0.2s,
+    background 0.2s;
+}
+
+.header__link:hover {
+  color: var(--text);
+  background: var(--surface2);
+}
+
+.header__link--active {
+  color: var(--accent);
+  background: rgba(245, 166, 35, 0.1);
+}
+
+.main {
+  flex: 1;
+  padding-top: 8px;
+}
+
+@media (max-width: 500px) {
+  .header {
+    padding: 0 12px;
+  }
+
+  .header__link {
+    padding: 6px 10px;
+    font-size: 0.8rem;
+  }
+}
+
+/* Winner modal dark style */
+.winner-modal .ant-modal-content {
+  background: #12122a !important;
+  border: 2px solid #f5a623 !important;
+  border-radius: 16px !important;
+}
+
+/* Remove default Ant Design button shadows (BUG 1 fix) */
+.ant-btn {
+  box-shadow: none !important;
+}
+
+.ant-btn:hover,
+.ant-btn:focus,
+.ant-btn:active {
+  box-shadow: none !important;
+}

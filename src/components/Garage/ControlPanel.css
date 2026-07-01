@@ -1,0 +1,15 @@
+.control-panel {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 14px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 14px;
+}
+
+.control-panel__row {
+  width: 100%;
+  display: flex !important;
+}

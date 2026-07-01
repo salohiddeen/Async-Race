@@ -1,0 +1,29 @@
+.winners {
+  padding: 20px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.winners__table .ant-table {
+  background: var(--surface) !important;
+  color: var(--text) !important;
+}
+
+.winners__table .ant-table-thead > tr > th {
+  background: var(--surface2) !important;
+  color: var(--text-secondary) !important;
+  border-bottom: 1px solid var(--border) !important;
+}
+
+.winners__table .ant-table-tbody > tr > td {
+  border-bottom: 1px solid var(--border) !important;
+  color: var(--text) !important;
+}
+
+.winners__table .ant-table-tbody > tr:hover > td {
+  background: var(--surface2) !important;
+}
+
+.winners__table .ant-pagination {
+  color: var(--text-secondary);
+}
