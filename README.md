@@ -2,7 +2,7 @@
 
 **Score: 310 / 400**
 
-**Deployed:** https://async-race-salohiddin.vercel.app
+**Deployed:** https://async-race-bice.vercel.app/
 
 ---
 
@@ -28,13 +28,13 @@ npm run build    # production build
 
 ## Scripts
 
-| Script | Description |
-|---|---|
-| `npm run dev` | Start dev server |
-| `npm run build` | Production build |
-| `npm run lint` | ESLint (Airbnb config) |
-| `npm run format` | Prettier auto-format |
-| `npm run ci:format` | Prettier format check |
+| Script              | Description            |
+| ------------------- | ---------------------- |
+| `npm run dev`       | Start dev server       |
+| `npm run build`     | Production build       |
+| `npm run lint`      | ESLint (Airbnb config) |
+| `npm run format`    | Prettier auto-format   |
+| `npm run ci:format` | Prettier format check  |
 
 ## Tech Stack
 
@@ -50,15 +50,18 @@ npm run build    # production build
 ## Checklist 310 / 400 pts
 
 ### 🚀 UI Deployment
+
 - [x] Deployment Platform: Deployed on Vercel (link above)
 
 ### ✅ Requirements to Commits and Repository
+
 - [x] Commit guidelines compliance: Conventional Commits format (init, feat, fix, refactor, docs)
 - [x] Checklist included in README.md
 - [x] Score calculation: 310/400
 - [x] UI Deployment link in README.md
 
 ### Basic Structure (80 points)
+
 - [x] Two Views (10 points): "Garage" and "Winners" views implemented
 - [x] Garage View Content (30 points):
   - [x] Name of view ("Garage")
@@ -72,6 +75,7 @@ npm run build    # production build
 - [x] Persistent State (30 points): Page numbers and input values preserved when switching views
 
 ### Garage View (90 points)
+
 - [x] Car Creation And Editing Panel — CRUD Operations (20 points): Create, update, delete cars; deleted from winners table too; empty/too-long names handled
 - [x] Color Selection (10 points): Ant Design ColorPicker (RGB), color shown on car icon
 - [x] Random Car Creation (20 points): 100 cars per click, 15 brands × 15 models combinations, random hex color
@@ -81,12 +85,14 @@ npm run build    # production build
 - [x] Empty Garage Page (10 extra points): Auto-navigates to previous page when last car on page is deleted
 
 ### 🏆 Winners View (50 points)
+
 - [x] Display Winners (15 points): Winner saved to DB after race, shown in Winners view
 - [x] Pagination for Winners (10 points): 10 winners per page
 - [x] Winners Table (15 points): №, car image, name, wins count, best time in seconds; wins incremented, best time updated only if better
 - [x] Sorting Functionality (10 points): Sort by wins and best time ASC/DESC via Ant Design Table sorter (server-side via query params)
 
 ### 🚗 Race (170 points)
+
 - [x] Start Engine Animation (20 points): Click A → wait for velocity → animate with requestAnimationFrame → drive request; animation stops on 500 error
 - [x] Stop Engine Animation (20 points): Click B → stopEngine API → car returns to start position
 - [x] Responsive Animation (30 points): Works on screens as small as 500px (tested)
@@ -97,10 +103,12 @@ npm run build    # production build
 - [x] Actions during the race (50 points): Edit and Delete buttons disabled during race; page navigation allowed; generate random cars allowed
 
 ### 🎨 Prettier and ESLint Configuration (10 points)
+
 - [x] Prettier Setup (5 points): `format` and `ci:format` scripts in package.json
 - [x] ESLint Configuration (5 points): Airbnb style guide with TypeScript, `lint` script, Redux Toolkit override for reducers
 
 ### 🌟 Overall Code Quality (100 points — reviewer discretion)
+
 - Layered architecture: `api/` `store/slices/` `hooks/` `components/` clearly separated
 - Custom `useRace` hook encapsulates all animation and engine logic
 - Helper functions extracted: `runAnimation`, `cancelAnim`, `buildColumns`, `getWinsColor`
